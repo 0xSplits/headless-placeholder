@@ -2,9 +2,14 @@
 <html lang="{{@site.locale}}">
 
   <head>
-      <meta http-equiv="refresh" content = "0;url=https://splits.org">
+    <script>
+      const path = window.location.pathname;
+      const queryString = window.location.search;
+      const newURL = 'https://splits.org' + path + queryString;
+      window.location.href = newURL;
+    </script>
 
-      {{ghost_head}}
+    {{ghost_head}}
   </head>
   <body>
     {{{body}}}
